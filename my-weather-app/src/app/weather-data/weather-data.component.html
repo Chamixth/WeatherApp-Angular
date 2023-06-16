@@ -1,0 +1,20 @@
+<body>
+
+
+    <h1>WEATHERinfo</h1>
+    <div class="search-area left-align">
+        <input type="text" [(ngModel)]="city" placeholder="Enter city name" />
+        <button type="submit" (click)="  getWeatherData(city)">Get Weather Details</button>
+    </div>
+        
+    
+    <div *ngIf="weatherData">
+        <h2>City: {{ weatherData.City }}</h2>
+        <app-temperature [temperature]="weatherData.Temperature"></app-temperature>
+        <app-humidity [humidity]="weatherData.Humidity"></app-humidity>
+        <app-air-pressure [airPressure]="weatherData.Pressure"></app-air-pressure>
+    </div>
+    <div *ngIf="errorMessage">
+        <p>{{ errorMessage }}</p>
+    </div>
+</body>

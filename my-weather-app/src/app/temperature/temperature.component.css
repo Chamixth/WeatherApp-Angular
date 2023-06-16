@@ -1,0 +1,19 @@
+.temperature-card {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #888f96; /* Add border */
+    border-radius: 3px;
+}
+
+.temperature-card .card-content {
+    text-align: center;
+}
+
+.temperature-card .card-content p {
+    font-size: 20px;
+    color: black;
+    
+}
+.card-content{
+    color: black;
+}
