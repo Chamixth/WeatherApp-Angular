@@ -1,6 +1,4 @@
-<body>
-
-
+<body [class]="getWeatherClass()">
     <h1>WEATHERinfo</h1>
     <div class="search-area left-align">
         <input type="text" [(ngModel)]="city" placeholder="Enter city name" />

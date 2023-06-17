@@ -11,7 +11,7 @@ export class WeatherDataComponent {
   city: string = '';
   weatherData: WeatherData | null=null;
   errorMessage: string = '';
-
+  weatherVideo: string = '';
   constructor(private weatherService: SearchedDataService) {}
   
   getWeatherData(city: string) {
@@ -25,6 +25,19 @@ export class WeatherDataComponent {
         this.errorMessage = 'Error retrieving weather data. Please try again.';
       }
     );
+  }
+  getWeatherClass(): string {
+    if (this.weatherData) {
+      // Determine the weather condition based on the temperature or any other weather data
+      if (this.weatherData.Condition == "Clear") {
+        return 'weather-sunny';
+      } else if (this.weatherData.Condition == "Clouds") {
+        return 'weather-cloudy';
+      } else if(this.weatherData.Condition=="Rain") {
+        return 'weather-rain';
+      }
+    }
+    return '';
   }
 
 }

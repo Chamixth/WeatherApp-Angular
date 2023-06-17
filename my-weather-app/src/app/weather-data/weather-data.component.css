@@ -1,6 +1,4 @@
-
 .search-area.left-align {
-  /* align-items: center; */
   display: flex;
   justify-content: left;
   max-width: 100%;
@@ -10,9 +8,11 @@
   left: 70%;
 }
 @media screen and (max-width: 600px) {
-  .search-area {
-      position: static;
-      text-align: center;
+  .search-area.left-align {
+    position: static;
+    justify-content: center;
+    left: auto;
+    text-align: center;
   }
 }
 .main-search-item{
@@ -20,15 +20,19 @@
   padding-top: 100px;
 }
 
-input{
-  width: 200px;
+input {
+  width: 100%; /* Adjusted width to fill the available space */
+  max-width: 200px; /* Added max-width to limit the input's width */
   height: 30px;
   border-radius: 10px;
 }
-button{
+
+
+button {
   height: 30px;
   border-radius: 8px;
 }
+
 h1{
   text-align: left;
   font-family: 'Righteous', cursive;
@@ -41,10 +45,24 @@ font-size: 500%;
 padding-top: 30px;
 color: black;
 }
-body{
-width: 100%;
-background: rgb(83,229,232);
-background: linear-gradient(45deg, rgba(83,229,232,1) 27%, rgba(147,142,137,0.7791491596638656) 82%);
-background-size: cover;
-background-repeat: no-repeat;
+body {
+  width: 100%;
+  background: rgb(83, 229, 232);
+  background: linear-gradient(
+    45deg,
+    rgba(83, 229, 232, 1) 27%,
+    rgba(147, 142, 137, 0.7791491596638656) 82%
+  );
+  background-repeat: no-repeat;
+}
+.weather-sunny {
+  background-image: url("src/assets/image/sunnyday.png");
+}
+
+.weather-cloudy {
+  background-image: url("src/assets/image/cloudy.jpg");
+}
+
+.weather-rain {
+  background-image: url("src/assets/image/rain.jpg");
 }

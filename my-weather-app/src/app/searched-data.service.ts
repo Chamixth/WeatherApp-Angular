@@ -20,7 +20,9 @@ export class SearchedDataService {
 }
 export interface WeatherData {
   City: string;
+  Condition:string;
   Humidity: number;
   Pressure: number;
   Temperature: number;
+  
 }
